@@ -1,0 +1,83 @@
+#!/bin/bash
+
+trap "trap - SIGTERM && kill -- -$$" SIGINT SIGTERM EXIT
+
+GREEN='\033[1;32m'
+CYAN='\033[0;36m'
+NOCOLOR='\033[0m'
+                                                                                                                         	                                                                                                                  
+echo -e "                                                           ${GREEN}\n"     
+echo -e "                                                           "
+echo -e "        ╔═╗╔═╗╔═╗╔═╗  ╔═╗┌─┐┬─┐┌─┐┌─┐┬─┐                   "
+echo -e "        ╠═╝║  ╠═╣╠═╝  ╠═╝├─┤├┬┘└─┐├┤ ├┬┘                   "
+echo -e "        ╩  ╚═╝╩ ╩╩    ╩  ┴ ┴┴└─└─┘└─┘┴└─                   "
+echo -e "                                                          ${CYAN}\n"                                              
+#                                                                         
+echo "Copyright 2021 - Kazi Ahsan and Jayne Rutledge"
+
+#define functions and variables for some ASCII art
+
+spinner=('|' '/' '-' '\')                                                                                                                                                                                  
+#run spin through it in the background $! process id of spin
+copy(){
+    echo -n "File procesing"
+	
+    spin &
+    pid=$!
+#loop through for 10 seconds and kill spin function after that 
+   for i in `seq 1 10`
+
+   do 
+       sleep 2
+   done
+   kill $pid
+#    echo -ne "\u001b[{1}F\u001b[2K"
+   echo ""
+}
+#loop through each item of array ans use it someway, echo -ne(don't create new line print over again) means any \r use for special characte in this case $
+spin(){
+    while [ 1 ]
+    do
+        for i in "${spinner[@]}"
+        do
+#             echo -ne "\r$i$i$i"
+	     echo -ne "."
+             sleep 0.2
+        done
+     done
+}
+
+
+#sslstrip_pid=$(ps -aux | grep sslstrip | grep -v 'grep' | awk '{ print $2 }')
+#kill $sslstrip_pid
+echo " "
+echo "Please Enter Your pcap File here and hit enter"
+read args
+copy
+tshark -Q -r $args --export-objects "http,icap_$args" >> /dev/null 2>&1
+#kill $pid
+###tshark -Q -r incident_capture.pcap --export-objects "http,/icat" >> /dev/null 2>&1
+for file in icap_$args/*; do md5sum $file; done > me2_$args.txt
+
+###grep -Fxf ~/Desktop/KaziAhsan/res1.txt ~/Desktop/KaziAhsan/file3 > file2
+###echo $file2
+##awk 'FNR==NR{a[$1];next}($1 in a){print}' file3 me2_$args.txt
+##https://github.com/lukewilliams-1248/MeInTheMiddle/blob/master/main.sh
+##https://patorjk.com/software/taag/#p=testall&h=1&v=1&c=bash&f=Ivrit&t=PCAP_Parser%0A
+./md5parser.py me2_$args.txt	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
