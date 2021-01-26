@@ -83,9 +83,7 @@ The location of the scripts can be found at: (https://github.com/KaziSAhsan/PCAP
 
 ## Export and Append to a .csv File
 
-<p><details> 
-<summary><b>How Export and appending works?</b>
-</summary>
+
 Create an excel file and save it as FromPython.csv (If you want to change the name of the .csv file you need to go to the md5parser.py file and change it within the file)
 
 ### 
@@ -100,6 +98,6 @@ Create an excel file and save it as FromPython.csv (If you want to change the na
 
 
 
-</details>
+
 
 
