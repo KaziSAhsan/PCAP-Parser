@@ -1,5 +1,5 @@
 # PCAP-Parser
-PCAP Parser Project by Kazi Ahsan and Jayne Rutledge                  Date: 1/23/2021
+<p><b>PCAP Parser Project by Kazi Ahsan and Jayne Rutledge                  Date: 1/23/2021</b></p>
 
 ***
 
@@ -79,7 +79,7 @@ The location of the scripts can be found at: (https://github.com/KaziSAhsan/PCAP
 ![PCAP Parser](images/pcap3.png)
 
 </details>
-***
+
 
 ## Export and Append to a .csv File
 
