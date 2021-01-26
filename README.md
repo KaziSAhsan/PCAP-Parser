@@ -20,8 +20,8 @@ Three scripts to get you started with your adventure into the world of Cyber Sec
 
 - Create an excel file and save it as FromPython.csv (If you want to change the name of the .csv file you need to go to the md5parser.py file and change it within the file).
 
-
-## Network Analysis** with Wireshark
+<details>
+  <summary>## Network Analysis** with Wireshark</summary>
 
 -We are using a pcap file from malware-analysis-traffic.net to generate network traffic for this scenario. 
  
@@ -31,7 +31,7 @@ Three scripts to get you started with your adventure into the world of Cyber Sec
 - We can see that there is a lot of HTTP which is related to web traffic.
 
 
-(images/wireshark2.png)
+![wireshark -r output](images/wireshark2.png)
  
 
 
@@ -69,7 +69,7 @@ Three scripts to get you started with your adventure into the world of Cyber Sec
 *This simple network scanner functions much like 
 Kali Linux's built-in netdiscover command.*
 
-Our scanner uses ARP requests instead of pings to discover what hosts are running on the netwrok.
+Our scanner uses ARP requests instead of pings to discover what hosts are running on the netwrok.</details>
 
 <details> 
 <summary><B>Why is an ARP request preferrable in this instance?</B>
