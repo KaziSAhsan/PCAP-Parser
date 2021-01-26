@@ -7,96 +7,64 @@ PCAP Parser Project by Kazi Ahsan and Jayne Rutledge                  Date: 1/23
 
 1. **Network Analysis** with Wireshark
 
-  - First we want to export http objects from wireshark into a pcap file to see if they may be malicious. 
+   -- First we want to export http objects from wireshark into a pcap file to see if they may be malicious. 
 
 2. **PCAP-Parser Software** with Python and Bash 
 
-- Now we are going to parse the PCAP file through our software to see if there are any known viruses – 
+   -- Now we are going to parse the PCAP file through our software to see if there are any known viruses – 
 
 3. **Export and Append** to a .csv File
 
-- Create an excel file and save it as FromPython.csv (If you want to change the name of the .csv file you need to go to the md5parser.py file and change it within the file).
+   -- Create an excel file and save it as FromPython.csv (If you want to change the name of the .csv file you need to go to the md5parser.py file and change it within the file).
 
 <details>
   <summary>Network Analysis with Wireshark</summary>
 
--We are using a pcap file from malware-analysis-traffic.net to generate network traffic for this scenario. 
+  -We are using a pcap file from malware-analysis-traffic.net to generate network traffic for this scenario. 
  
 ![wireshark -r subnet](images/wireshark1.PNG)
 
--The first thing we will do is go up to Statistics, to Protocol Hierarchy to see what protocols are being used in this pcap. We are interested in TCP application traffic.
-- We can see that there is a lot of HTTP which is related to web traffic.
+ -The first thing we will do is go up to Statistics, to Protocol Hierarchy to see what protocols are being used in this pcap. We are interested in TCP application traffic.
+ - We can see that there is a lot of HTTP which is related to web traffic.
 
 
 ![wireshark -r output](images/wireshark2.png)
  
--We will select a filter to return only on layer 7, HTTP protocol. 
+ -We will select a filter to return only on layer 7, HTTP protocol. 
  
 (images/wireshark3.png)
 
--For this demonstration, we are interested in retrieving GET and POST requests for now. So we type in http.request. 
+ -For this demonstration, we are interested in retrieving GET and POST requests for now. So we type in http.request. 
 
 (images/wireshark4.png)
  
--To get the actual file we need to go to File, Export Objects, and HTTP.
+ -To get the actual file we need to go to File, Export Objects, and HTTP.
  
 (images/wireshark5.png)
 
--We can now see all the file objects that were downloaded in this packet capture. We then sort by Content Type. In this save we see gifs, and text and applications. 
--In this example, there are three different types of Applications which appear suspicious we will look at: java, Microsoft executable download and shockwave-flash. 
--I’m going to save this PCAP file in the same folder with my other two md5parser and pcap parser file. 
+ -We can now see all the file objects that were downloaded in this packet capture. We then sort by Content Type. In this save we see gifs, and text and applications. 
+ -In this example, there are three different types of Applications which appear suspicious we will look at: java, Microsoft executable download and shockwave-flash. 
+ -I’m going to save this PCAP file in the same folder with my other two md5parser and pcap parser file. 
 
 (images/wireshark6.png)
 
 *we use wireshark tools to do that.*
 </details>
 
-<details> 
-<summary><B>Why is an ARP request preferrable in this instance?</B>
-</summary>
 
-> ARP is an automated part of the day-to-day functioning of many network devices, so blue teamers are less likely to flag it in their logs and investigate us. ARP requests are also less likely to be blocked by firewall rules.
-</details></p>
-
-Here's what we'd expect to find using the built-in Kali tool **netdiscover**.
-
-![netdiscover -r subnet](./image/netd_cmd.png)
-
-    Note that we are giving netdiscover our own subnet
-
-![netdiscover output](./image/netd_output.png)
-
-    netdiscover outputs the subnet IP and MAC addresses of other devices on our network
-
-We should get the same output by running [ARP_scanner.py](/ARP_netscan.py). Make sure to change the py_scan variable (at the end of the script) to the address of the subnet you want to scan!
-
-
-<details> 
-<summary><b>Why does the python script broadcast to "ff:ff:ff:ff:ff:ff"?</b>
-</summary>
-
-> "ff:ff:ff:ff:ff:ff" is the broadcast MAC address, so this message will reach all computers on our network. Once we get a reply from a device, we replace "ff:ff:ff:ff:ff:ff" with the known MAC address, which gets used for the remainder of the script.
-</details><p>
-
-</p>
-
-Now that we have a few devices to target, let's use an ARP attack to see what we can do.
-
-***
 
 ## **PCAP-Parser Software** with Python and Bash 
-
  
- 
- 
-<details> 
-  <summary><b>What is an our PCAP Parser software and why would anyone use it?</b>
+<p><details> 
+<summary><b>What is an our PCAP Parser software and why would anyone use it?</b>
 </summary>
 
-> The location of the scripts can be found at: (https://github.com/KaziSAhsan/PCAP-Parser/blob/main/pcapp) 
+The location of the scripts can be found at: (https://github.com/KaziSAhsan/PCAP-Parser/blob/main/pcapp) 
 (https://github.com/KaziSAhsan/PCAP-Parser/blob/main/md5parser.py)
-- Make sure you place them in the same directory. When you execute pcapp then this will call the md5parser.py and execute it. Before that you need to change your executable permission to run this script. This will take less than 30 seconds to run this script. 
-
+- Make sure you place them in the same directory. When you execute pcapp then this will call the md5parser.py and execute it. Before that you need to change your executable    permission to run this script. This will take less than 30 seconds to run this script. 
+  (images/pcap1.png)
+  (images/pcap2.png)
+  (images/pcap3.png)
 </details><p>
 
 </p>
