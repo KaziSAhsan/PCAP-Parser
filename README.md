@@ -3,6 +3,8 @@
 
 ***
 
+![PCAP Parser](images/pcap1.png)
+
 ## So where do we begin?
 
 1. **Network Analysis** with Wireshark
