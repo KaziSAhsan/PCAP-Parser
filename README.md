@@ -1,8 +1,5 @@
 # PCAP-Parser
 PCAP Parser Project by Kazi Ahsan and Jayne Rutledge                  Date: 1/23/2021
-# Python Tutorials for Security Engineers
-
-Three scripts to get you started with your adventure into the world of Cyber Security-- specfically ARP and its use for Man in the Middle attacks. Developed and tested on Kali Linux.
 
 ***
 
@@ -21,7 +18,7 @@ Three scripts to get you started with your adventure into the world of Cyber Sec
 - Create an excel file and save it as FromPython.csv (If you want to change the name of the .csv file you need to go to the md5parser.py file and change it within the file).
 
 <details>
-  <summary>## Network Analysis** with Wireshark</summary>
+  <summary>Network Analysis with Wireshark</summary>
 
 -We are using a pcap file from malware-analysis-traffic.net to generate network traffic for this scenario. 
  
@@ -33,43 +30,26 @@ Three scripts to get you started with your adventure into the world of Cyber Sec
 
 ![wireshark -r output](images/wireshark2.png)
  
-
-
-
-
-
-
-
-
-
 -We will select a filter to return only on layer 7, HTTP protocol. 
  
-
-
+(images/wireshark3.png)
 
 -For this demonstration, we are interested in retrieving GET and POST requests for now. So we type in http.request. 
 
-
+(images/wireshark4.png)
  
-
-
-
 -To get the actual file we need to go to File, Export Objects, and HTTP.
  
-
+(images/wireshark5.png)
 
 -We can now see all the file objects that were downloaded in this packet capture. We then sort by Content Type. In this save we see gifs, and text and applications. 
 -In this example, there are three different types of Applications which appear suspicious we will look at: java, Microsoft executable download and shockwave-flash. 
 -I’m going to save this PCAP file in the same folder with my other two md5parser and pcap parser file. 
 
+(images/wireshark6.png)
 
-
- 
-
-*This simple network scanner functions much like 
-Kali Linux's built-in netdiscover command.*
-
-Our scanner uses ARP requests instead of pings to discover what hosts are running on the netwrok.</details>
+*we use wireshark tools to do that.*
+</details>
 
 <details> 
 <summary><B>Why is an ARP request preferrable in this instance?</B>
