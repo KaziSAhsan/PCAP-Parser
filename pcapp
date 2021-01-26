@@ -62,8 +62,7 @@ for file in icap_$args/*; do md5sum $file; done > me2_$args.txt
 ###grep -Fxf ~/Desktop/KaziAhsan/res1.txt ~/Desktop/KaziAhsan/file3 > file2
 ###echo $file2
 ##awk 'FNR==NR{a[$1];next}($1 in a){print}' file3 me2_$args.txt
-##https://github.com/lukewilliams-1248/MeInTheMiddle/blob/master/main.sh
-##https://patorjk.com/software/taag/#p=testall&h=1&v=1&c=bash&f=Ivrit&t=PCAP_Parser%0A
+
 ./md5parser.py me2_$args.txt	
 
 
