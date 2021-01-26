@@ -33,21 +33,21 @@ PCAP Parser Project by Kazi Ahsan and Jayne Rutledge                  Date: 1/23
  
  -We will select a filter to return only on layer 7, HTTP protocol. 
  
-(images/wireshark3.png)
+![wireshark -r output](images/wireshark3.png)
 
  -For this demonstration, we are interested in retrieving GET and POST requests for now. So we type in http.request. 
 
-(images/wireshark4.png)
+![wireshark -r output](images/wireshark4.png)
  
  -To get the actual file we need to go to File, Export Objects, and HTTP.
  
-(images/wireshark5.png)
+![wireshark -r output](images/wireshark5.png)
 
  -We can now see all the file objects that were downloaded in this packet capture. We then sort by Content Type. In this save we see gifs, and text and applications. 
  -In this example, there are three different types of Applications which appear suspicious we will look at: java, Microsoft executable download and shockwave-flash. 
  -I’m going to save this PCAP file in the same folder with my other two md5parser and pcap parser file. 
 
-(images/wireshark6.png)
+![wireshark -r output](images/wireshark6.png)
 
 *we use wireshark tools to do that.*
 </details>
