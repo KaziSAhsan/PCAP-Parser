@@ -4,7 +4,7 @@
 ##Program Dir   - Desktop/KaziAhsan
 ##Date          - 01/18/2021
 ##Programmer    - Kazi Ahsan
-##Description   - Identify malwar from pcap by matching hashe
+##Description   - Identify malware from pcap by matching hashe
 ##-----------------------------------------------------------------
 
 import sys
@@ -19,7 +19,7 @@ import csv
 
 
 def main():
-    # Create a list of malwar that can be found
+    # Create a list of malware that can be found
     mal_file = {'531828e91ced7be99b989c0a64e50f56':'trojan', 
                 '5e976d618a95ba3e41c77f1a5c8f1a6e':'arp', 
                 'd0c2102f36e51bc5872ccbdd0e9e7d31':'wannacry1',
@@ -29,7 +29,7 @@ def main():
                 '5071534ded881ff35afe89934ce25b02':'Trojan'
                }
 
-    # This dictionary will store the values if there's a malwar match found
+    # This dictionary will store the values if there's a malware match found
     match = {}
     
     # args will extract the filename from bash script
