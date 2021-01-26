@@ -85,20 +85,12 @@ The location of the scripts can be found at: (https://github.com/KaziSAhsan/PCAP
 
 ## Export and Append to a .csv File
 
-<details>
-Create an excel file and save it as FromPython.csv (If you want to change the name of the .csv file you need to go to the md5parser.py file and change it within the file)
-
-### 
-
+Create an excel file and save it as FromPython.csv (If you want to change the name of the .csv file you need to go to the md5parser.py file and change it within the file) 
 1. Once detected, the hash (es), malware, the infected file name, and the program run-date will be exported and appended to a .csv file. This file will hold all the records. 
-
 ![FromPython.csv](images/image (1).png)
-
-
 
 2. We can use this file (weekly/monthly) to analyze the data, and find out which pcap files are mostly infected, what kind of malware is attacking the most or how frequently we are getting a malware match.
 
-</details>
 
 
 
