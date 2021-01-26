@@ -92,9 +92,9 @@ Create an excel file and save it as FromPython.csv (If you want to change the na
 
 1. Once detected, the hash (es), malware, the infected file name, and the program run-date will be exported and appended to a .csv file. This file will hold all the records. 
 
-![.csv](image (1).png)
+![FromPython.csv](images/image (1).png)
 
-    note my interface is eth0 and my MAC Address 08:00:27:23:ff:90
+
 
 2. We can use this file (weekly/monthly) to analyze the data, and find out which pcap files are mostly infected, what kind of malware is attacking the most or how frequently we are getting a malware match.
 
