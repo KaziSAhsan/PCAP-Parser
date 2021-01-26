@@ -17,8 +17,9 @@ PCAP Parser Project by Kazi Ahsan and Jayne Rutledge                  Date: 1/23
 
    -- Create an excel file and save it as FromPython.csv (If you want to change the name of the .csv file you need to go to the md5parser.py file and change it within the file).
 
+## **Network Analysis** with Wireshark
 <details>
-  <summary>Network Analysis with Wireshark</summary>
+  <summary>How Network Analysis with Wireshark works</summary>
 
   -We are using a pcap file from malware-analysis-traffic.net to generate network traffic for this scenario. 
  
