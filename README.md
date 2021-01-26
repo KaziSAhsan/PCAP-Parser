@@ -79,14 +79,16 @@ The location of the scripts can be found at: (https://github.com/KaziSAhsan/PCAP
 3. Then it converts data into hashes and compares them with some known malicious malware hashes that already exist in our software. When malicious software is run through our hashing program it produces a unique hash that identifies that malware (a sort of fingerprint).
 
 ![PCAP Parser](images/pcap3.png)
-![FromPython.csv](images/image (1).png)
+
 </details>
 
 
 ## Export and Append to a .csv File
 
 Create an excel file and save it as FromPython.csv (If you want to change the name of the .csv file you need to go to the md5parser.py file and change it within the file) 
-1. Once detected, the hash (es), malware, the infected file name, and the program run-date will be exported and appended to a .csv file. This file will hold all the records.
+1. Once detected, the hash (es), malware, the infected file name, and the program run-date will be exported and appended to a .csv file. This file will hold all the records. 
+
+![FromPython](images/image (1).png)
 
 2. We can use this file (weekly/monthly) to analyze the data, and find out which pcap files are mostly infected, what kind of malware is attacking the most or how frequently we are getting a malware match.
 
