@@ -62,36 +62,22 @@ PCAP Parser Project by Kazi Ahsan and Jayne Rutledge                  Date: 1/23
 
 The location of the scripts can be found at: (https://github.com/KaziSAhsan/PCAP-Parser/blob/main/pcapp) 
 (https://github.com/KaziSAhsan/PCAP-Parser/blob/main/md5parser.py)
-- Make sure you place them in the same directory. When you execute pcapp then this will call the md5parser.py and execute it. Before that you need to change your executable    permission to run this script. This will take less than 30 seconds to run this script. 
-  (images/pcap1.png)
-  (images/pcap2.png)
-  (images/pcap3.png)
-</details><p>
-
-</p>
+1. Make sure you place them in the same directory. When you execute pcapp then this will call the md5parser.py and execute it. Before that you need to change your executable    permission to run this script. This will take less than 30 seconds to run this script. 
+ 
 
 
-![ARP Attacker](./image/attack_hostname_gatrway.png)
+![PCAP Parser](images/pcap1.png)
 
 
-2. When we run an ARP scan of the network from our attack client, we find a number of machines, including the one we want to attack: 10.0.2.4.
+2. Right now our program is going to check the hashes for any known virus. By verifying the hashed signature to be malware we will then know the appropriate corrective actions to take. When we are parsing pcap data into our software, our software captures the packet data, sends it to a file that is the same as the pcap name. 
 
-![ARP Scan](./image/arp_scan.png)
-
-
-3. This is the IP Address of the machine I am targetting. <p><b>IMPORTANT: I own this target machine. Do not execute this attack against any machine that is not yours without explicit written permission.</b>
-
-![ARP Spoof Target](./image/target_ip.png)
-
-<i>Again, note that my attack and target clients share the same gateway router</i>
+!PCAP Parser](images/pcap2.png)
 
 
-4. With this information, we can launch the attack and gain Man in the Middle access.
+3. Then it converts data into hashes and compares them with some known malicious malware hashes that already exist in our software. When malicious software is run through our hashing program it produces a unique hash that identifies that malware (a sort of fingerprint).
 
-![ARP Attack](./image/spoof_attack.png)
+![PCAP Parser](images/pcap3.png)
 
-
-[This script](/arp_spoof.py) sends alternating packets to our gateway router and our target machine; these ARP packets match our MAC address to two different IP addresses. That is, we are telling the gateway router that our machine has the victim's IP address, and we are telling the victim that our machine has the gateway router's IP address. That way, traffic back and forth from the victim to the router flows through us.
 
 ***
 
