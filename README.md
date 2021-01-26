@@ -7,7 +7,7 @@ PCAP Parser Project by Kazi Ahsan and Jayne Rutledge                  Date: 1/23
 
 1. **Network Analysis** with Wireshark
 
-   . First we want to export http objects from wireshark into a pcap file to see if they may be malicious. 
+   -- First we want to export http objects from wireshark into a pcap file to see if they may be malicious. 
 
 2. **PCAP-Parser Software** with Python and Bash 
 
@@ -78,7 +78,7 @@ The location of the scripts can be found at: (https://github.com/KaziSAhsan/PCAP
 
 ![PCAP Parser](images/pcap3.png)
 
-
+,/details>
 ***
 
 ## Export and Append to a .csv File
