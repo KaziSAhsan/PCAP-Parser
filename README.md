@@ -78,7 +78,7 @@ The location of the scripts can be found at: (https://github.com/KaziSAhsan/PCAP
 
 ![PCAP Parser](images/pcap3.png)
 
-,/details>
+</details>
 ***
 
 ## Export and Append to a .csv File
