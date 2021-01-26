@@ -55,7 +55,6 @@
 </details>
 
 
-
 ## **PCAP-Parser Software** with Python and Bash 
  
 <p><details> 
@@ -66,10 +65,7 @@ The location of the scripts can be found at: (https://github.com/KaziSAhsan/PCAP
 (https://github.com/KaziSAhsan/PCAP-Parser/blob/main/md5parser.py)
 1. Make sure you place them in the same directory. When you execute pcapp then this will call the md5parser.py and execute it. Before that you need to change your executable    permission to run this script. This will take less than 30 seconds to run this script. 
  
-
-
 ![PCAP Parser](images/pcap1.png)
-
 
 2. Right now our program is going to check the hashes for any known virus. By verifying the hashed signature to be malware we will then know the appropriate corrective actions to take. When we are parsing pcap data into our software, our software captures the packet data, sends it to a file that is the same as the pcap name. 
 
@@ -87,8 +83,6 @@ The location of the scripts can be found at: (https://github.com/KaziSAhsan/PCAP
 
 Create an excel file and save it as FromPython.csv (If you want to change the name of the .csv file you need to go to the md5parser.py file and change it within the file) 
 1. Once detected, the hash (es), malware, the infected file name, and the program run-date will be exported and appended to a .csv file. This file will hold all the records. 
-
-![Export](images/image (1).png)
 
 2. We can use this file (weekly/monthly) to analyze the data, and find out which pcap files are mostly infected, what kind of malware is attacking the most or how frequently we are getting a malware match.
 
