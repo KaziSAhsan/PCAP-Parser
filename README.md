@@ -3,7 +3,7 @@
 
 ***
 
-![PCAP Parser](images/pcap1.png align='center')
+![PCAP Parser](images/pcap1.png)
 
 ## So where do we begin?
 
