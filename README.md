@@ -3,7 +3,7 @@
 
 ***
 
-![PCAP Parser](images/pcap1.png)
+![PCAP Parser](images/pcap3.png)
 
 ## So where do we begin?
 
