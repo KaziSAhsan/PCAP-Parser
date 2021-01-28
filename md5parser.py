@@ -56,9 +56,9 @@ def main():
     # Create a DataFrame and input all the data into it
     data = pd.DataFrame({'Date': time, 'FileName': args, 'Hash': Hash, 'Malware': Malware})
 
-    # If there are malwar found, then print out that the file
-    # is infected and also print the hash and the malwar name
-    # if no matches found, then print out that no malwar found
+    # If there are malware found, then print out that the file
+    # is infected and also print the hash and the malware name
+    # if no matches found, then print out that no malware found
     if match != {}:
         print("\n\033[31m Your File is infected -- Please see the table below: ""\033[0:36m \n")# .format(match))
         print(data.to_string(justify='center', index=False))
